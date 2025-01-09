@@ -1,0 +1,13 @@
+name: 'lms-admin-fe'
+
+services:      
+  frontend:
+    container_name: "lms-admin-fe"
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+      args:
+        - REACT_APP_DYNAMIC_SERVER_URL=1
+    ports:
+      - '3082:80'
+      
